@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>clav_app/syslogContent - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-clav_app.html">clav_app</a><ul class='methods'><li data-type='method'><a href="module-clav_app.html#~on_SIGINT">on_SIGINT</a></li><li data-type='method'><a href="module-clav_app.html#~sysLogServerStarted">sysLogServerStarted</a></li><li data-type='method'><a href="module-clav_app.html#~sysLogServerStopped">sysLogServerStopped</a></li></ul></li><li><a href="module-clav_app_logdb.html">clav_app/logdb</a><ul class='methods'><li data-type='method'><a href="module-clav_app_logdb.html#.Init">Init</a></li><li data-type='method'><a href="module-clav_app_logdb.html#.Insert">Insert</a></li><li data-type='method'><a href="module-clav_app_logdb.html#.Select">Select</a></li></ul></li><li><a href="module-clav_app_restapi.html">clav_app/restapi</a><ul class='methods'><li data-type='method'><a href="module-clav_app_restapi.html#.CheckIP">CheckIP</a></li><li data-type='method'><a href="module-clav_app_restapi.html#.FetchLogs">FetchLogs</a></li><li data-type='method'><a href="module-clav_app_restapi.html#.FetchStats">FetchStats</a></li><li data-type='method'><a href="module-clav_app_restapi.html#.QueryParse2Filter">QueryParse2Filter</a></li></ul></li><li><a href="module-clav_app_statsdb.html">clav_app/statsdb</a><ul class='methods'><li data-type='method'><a href="module-clav_app_statsdb.html#.DeleteAllStats">DeleteAllStats</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.FetchAllStats">FetchAllStats</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.Init">Init</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.InitialiseAllStats">InitialiseAllStats</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.InsertStats">InsertStats</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.StatPlusPlus">StatPlusPlus</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.TimeUpdate">TimeUpdate</a></li></ul></li><li><a href="module-clav_app_syslogContent.html">clav_app/syslogContent</a><ul class='methods'><li data-type='method'><a href="module-clav_app_syslogContent.html#.CheckDate">CheckDate</a></li><li data-type='method'><a href="module-clav_app_syslogContent.html#.ConstructPayload">ConstructPayload</a></li><li data-type='method'><a href="module-clav_app_syslogContent.html#.ConvertDate2ISO">ConvertDate2ISO</a></li><li data-type='method'><a href="module-clav_app_syslogContent.html#.EntireLogMatch">EntireLogMatch</a></li><li data-type='method'><a href="module-clav_app_syslogContent.html#.HandleIncomingLogs">HandleIncomingLogs</a></li></ul></li><li><a href="module-clav_app_syslogServer.html">clav_app/syslogServer</a><ul class='methods'><li data-type='method'><a href="module-clav_app_syslogServer.html#.CheckAndAssignArgs">CheckAndAssignArgs</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.DisplayHelp">DisplayHelp</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.Start">Start</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.StartRestApi">StartRestApi</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.StartSyslogContent">StartSyslogContent</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.Stop">Stop</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">clav_app/syslogContent</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">module that handles the rst operations for log and it's statistics</div>
+        
+
+        
+            
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_syslogContent.js.html">lib/syslogContent.js</a>, <a href="lib_syslogContent.js.html#line2">line 2</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+        <h3 class="subsection-title">Requires</h3>
+
+        <ul>
+            <li>module:winston</li>
+        </ul>
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".CheckDate"><span class="type-signature">(static) </span>CheckDate<span class="signature">(possibleDate)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_syslogContent.js.html">lib/syslogContent.js</a>, <a href="lib_syslogContent.js.html#line37">line 37</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    check if the date matches the specified format
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>possibleDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the date to check</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    regex matched object array containing the matched  groups
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".ConstructPayload"><span class="type-signature">(static) </span>ConstructPayload<span class="signature">(date, addr, efw, evt, allActions<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_syslogContent.js.html">lib/syslogContent.js</a>, <a href="lib_syslogContent.js.html#line119">line 119</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    this function constructus the payload structure, that will later be used to insert asa single row into the logdb.also updates the statdb with statistics
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>date</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">date</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>addr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>efw</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>evt</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>allActions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".ConvertDate2ISO"><span class="type-signature">(static) </span>ConvertDate2ISO<span class="signature">(confirmedDate)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_syslogContent.js.html">lib/syslogContent.js</a>, <a href="lib_syslogContent.js.html#line45">line 45</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    convert a format confirmed date into ISO format
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>confirmedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the date to convert</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    regex matched object array containing the matched  groups
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".EntireLogMatch"><span class="type-signature">(static) </span>EntireLogMatch<span class="signature">(log)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_syslogContent.js.html">lib/syslogContent.js</a>, <a href="lib_syslogContent.js.html#line29">line 29</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    check if the log matches the specified format
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>log</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the log to check</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    regex matched object array containing the matched  groups
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".HandleIncomingLogs"><span class="type-signature">(static) </span>HandleIncomingLogs<span class="signature">(msgBuffer, remote)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_syslogContent.js.html">lib/syslogContent.js</a>, <a href="lib_syslogContent.js.html#line54">line 54</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    the handler for incoming logs via the db socket. parses, and stores the log in the logdb.also updates the statdb with statistics
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>msgBuffer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">buffer</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the request object coming from express</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>remote</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the response object coming from express</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Apr 01 2018 23:03:17 GMT+0200 (W. Europe Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

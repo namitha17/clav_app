@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>clav_app - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-clav_app.html">clav_app</a><ul class='methods'><li data-type='method'><a href="module-clav_app.html#~on_SIGINT">on_SIGINT</a></li><li data-type='method'><a href="module-clav_app.html#~sysLogServerStarted">sysLogServerStarted</a></li><li data-type='method'><a href="module-clav_app.html#~sysLogServerStopped">sysLogServerStopped</a></li></ul></li><li><a href="module-clav_app_logdb.html">clav_app/logdb</a><ul class='methods'><li data-type='method'><a href="module-clav_app_logdb.html#.Init">Init</a></li><li data-type='method'><a href="module-clav_app_logdb.html#.Insert">Insert</a></li><li data-type='method'><a href="module-clav_app_logdb.html#.Select">Select</a></li></ul></li><li><a href="module-clav_app_restapi.html">clav_app/restapi</a><ul class='methods'><li data-type='method'><a href="module-clav_app_restapi.html#.CheckIP">CheckIP</a></li><li data-type='method'><a href="module-clav_app_restapi.html#.FetchLogs">FetchLogs</a></li><li data-type='method'><a href="module-clav_app_restapi.html#.FetchStats">FetchStats</a></li><li data-type='method'><a href="module-clav_app_restapi.html#.QueryParse2Filter">QueryParse2Filter</a></li></ul></li><li><a href="module-clav_app_statsdb.html">clav_app/statsdb</a><ul class='methods'><li data-type='method'><a href="module-clav_app_statsdb.html#.DeleteAllStats">DeleteAllStats</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.FetchAllStats">FetchAllStats</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.Init">Init</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.InitialiseAllStats">InitialiseAllStats</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.InsertStats">InsertStats</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.StatPlusPlus">StatPlusPlus</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.TimeUpdate">TimeUpdate</a></li></ul></li><li><a href="module-clav_app_syslogContent.html">clav_app/syslogContent</a><ul class='methods'><li data-type='method'><a href="module-clav_app_syslogContent.html#.CheckDate">CheckDate</a></li><li data-type='method'><a href="module-clav_app_syslogContent.html#.ConstructPayload">ConstructPayload</a></li><li data-type='method'><a href="module-clav_app_syslogContent.html#.ConvertDate2ISO">ConvertDate2ISO</a></li><li data-type='method'><a href="module-clav_app_syslogContent.html#.EntireLogMatch">EntireLogMatch</a></li><li data-type='method'><a href="module-clav_app_syslogContent.html#.HandleIncomingLogs">HandleIncomingLogs</a></li></ul></li><li><a href="module-clav_app_syslogServer.html">clav_app/syslogServer</a><ul class='methods'><li data-type='method'><a href="module-clav_app_syslogServer.html#.CheckAndAssignArgs">CheckAndAssignArgs</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.DisplayHelp">DisplayHelp</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.Start">Start</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.StartRestApi">StartRestApi</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.StartSyslogContent">StartSyslogContent</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.Stop">Stop</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">clav_app</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">Main file kicking off the restapi and the syslogContent via the syslogServer module</div>
+        
+
+        
+            
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="app.js.html">app.js</a>, <a href="app.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+        <h3 class="subsection-title">Requires</h3>
+
+        <ul>
+            <li><a href="module-clav_app_syslogServer.html">module:clav_app/syslogServer</a></li>
+        </ul>
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="~on_SIGINT"><span class="type-signature">(inner) </span>on_SIGINT<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="app.js.html">app.js</a>, <a href="app.js.html#line24">line 24</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Block that handles cntrl-c (interrupt) signalafter this event fires, the shutdown signal is passed on to the stop method of syslogServer
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~sysLogServerStarted"><span class="type-signature">(inner) </span>sysLogServerStarted<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="app.js.html">app.js</a>, <a href="app.js.html#line12">line 12</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    call back function after syslog server has started
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~sysLogServerStopped"><span class="type-signature">(inner) </span>sysLogServerStopped<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="app.js.html">app.js</a>, <a href="app.js.html#line19">line 19</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    call back function after syslog server has stopped
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Apr 01 2018 23:03:17 GMT+0200 (W. Europe Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

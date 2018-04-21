@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>clav_app/syslogServer - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-clav_app.html">clav_app</a><ul class='methods'><li data-type='method'><a href="module-clav_app.html#~on_SIGINT">on_SIGINT</a></li><li data-type='method'><a href="module-clav_app.html#~sysLogServerStarted">sysLogServerStarted</a></li><li data-type='method'><a href="module-clav_app.html#~sysLogServerStopped">sysLogServerStopped</a></li></ul></li><li><a href="module-clav_app_logdb.html">clav_app/logdb</a><ul class='methods'><li data-type='method'><a href="module-clav_app_logdb.html#.Init">Init</a></li><li data-type='method'><a href="module-clav_app_logdb.html#.Insert">Insert</a></li><li data-type='method'><a href="module-clav_app_logdb.html#.Select">Select</a></li></ul></li><li><a href="module-clav_app_restapi.html">clav_app/restapi</a><ul class='methods'><li data-type='method'><a href="module-clav_app_restapi.html#.CheckIP">CheckIP</a></li><li data-type='method'><a href="module-clav_app_restapi.html#.FetchLogs">FetchLogs</a></li><li data-type='method'><a href="module-clav_app_restapi.html#.FetchStats">FetchStats</a></li><li data-type='method'><a href="module-clav_app_restapi.html#.QueryParse2Filter">QueryParse2Filter</a></li></ul></li><li><a href="module-clav_app_statsdb.html">clav_app/statsdb</a><ul class='methods'><li data-type='method'><a href="module-clav_app_statsdb.html#.DeleteAllStats">DeleteAllStats</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.FetchAllStats">FetchAllStats</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.Init">Init</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.InitialiseAllStats">InitialiseAllStats</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.InsertStats">InsertStats</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.StatPlusPlus">StatPlusPlus</a></li><li data-type='method'><a href="module-clav_app_statsdb.html#.TimeUpdate">TimeUpdate</a></li></ul></li><li><a href="module-clav_app_syslogContent.html">clav_app/syslogContent</a><ul class='methods'><li data-type='method'><a href="module-clav_app_syslogContent.html#.CheckDate">CheckDate</a></li><li data-type='method'><a href="module-clav_app_syslogContent.html#.ConstructPayload">ConstructPayload</a></li><li data-type='method'><a href="module-clav_app_syslogContent.html#.ConvertDate2ISO">ConvertDate2ISO</a></li><li data-type='method'><a href="module-clav_app_syslogContent.html#.EntireLogMatch">EntireLogMatch</a></li><li data-type='method'><a href="module-clav_app_syslogContent.html#.HandleIncomingLogs">HandleIncomingLogs</a></li></ul></li><li><a href="module-clav_app_syslogServer.html">clav_app/syslogServer</a><ul class='methods'><li data-type='method'><a href="module-clav_app_syslogServer.html#.CheckAndAssignArgs">CheckAndAssignArgs</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.DisplayHelp">DisplayHelp</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.Start">Start</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.StartRestApi">StartRestApi</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.StartSyslogContent">StartSyslogContent</a></li><li data-type='method'><a href="module-clav_app_syslogServer.html#.Stop">Stop</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">clav_app/syslogServer</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">module that handles the rst operations for log and it's statistics</div>
+        
+
+        
+            
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_syslogServer.js.html">lib/syslogServer.js</a>, <a href="lib_syslogServer.js.html#line2">line 2</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+        <h3 class="subsection-title">Requires</h3>
+
+        <ul>
+            <li>module:express</li>
+        
+            <li>module:dgrma</li>
+        
+            <li>module:winston</li>
+        
+            <li><a href="module-clav_app_syslogContent.html">module:clav_app/syslogContent</a></li>
+        
+            <li><a href="module-clav_app_restapi.html">module:clav_app/restapi</a></li>
+        
+            <li><a href="module-clav_app_logdb.html">module:clav_app/logdb</a></li>
+        
+            <li><a href="module-clav_app_statsdb.html">module:clav_app/statsdb</a></li>
+        </ul>
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".CheckAndAssignArgs"><span class="type-signature">(static) </span>CheckAndAssignArgs<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_syslogServer.js.html">lib/syslogServer.js</a>, <a href="lib_syslogServer.js.html#line39">line 39</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    parse the command line arguments passed to the node executable
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".DisplayHelp"><span class="type-signature">(static) </span>DisplayHelp<span class="signature">(err)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_syslogServer.js.html">lib/syslogServer.js</a>, <a href="lib_syslogServer.js.html#line105">line 105</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    displays the help and usage
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>err</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".Start"><span class="type-signature">(static) </span>Start<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_syslogServer.js.html">lib/syslogServer.js</a>, <a href="lib_syslogServer.js.html#line75">line 75</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    starts the restapi and the syslogContent
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".StartRestApi"><span class="type-signature">(static) </span>StartRestApi<span class="signature">(restPort<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_syslogServer.js.html">lib/syslogServer.js</a>, <a href="lib_syslogServer.js.html#line132">line 132</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    starts the restapi
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>restPort</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>515</code>
+                
+                </td>
+            
+
+            <td class="description last">port to run the restapi</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".StartSyslogContent"><span class="type-signature">(static) </span>StartSyslogContent<span class="signature">(syslogPort<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_syslogServer.js.html">lib/syslogServer.js</a>, <a href="lib_syslogServer.js.html#line116">line 116</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    starts the the syslogContent
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>syslogPort</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>514</code>
+                
+                </td>
+            
+
+            <td class="description last">port to listen the syslogContent</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".Stop"><span class="type-signature">(static) </span>Stop<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_syslogServer.js.html">lib/syslogServer.js</a>, <a href="lib_syslogServer.js.html#line91">line 91</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    stops the restapi and the syslogContent
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Apr 01 2018 23:03:17 GMT+0200 (W. Europe Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
