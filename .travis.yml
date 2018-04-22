@@ -1,0 +1,12 @@
+language: node_js
+node_js: "8"
+stages: 
+    - name: unit_tests
+    
+jobs:
+    include:
+        - stage: unit_tests
+          script: 
+            - "npm install mocha chai"
+            - "./node_modules/.bin/mocha ./testsRestApi.js"
+            - "./node_modules/.bin/mocha ./testsSysLogContent.js"
