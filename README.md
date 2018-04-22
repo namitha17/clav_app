@@ -1,5 +1,6 @@
 # clav_nd
 
+Implementation details:
 
 Usage ::
 >  node app.js [-s <port>] [-r <port>] | -h
