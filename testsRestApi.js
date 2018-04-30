@@ -87,17 +87,17 @@ describe("rest api", function(){
         num:100,
         startTime: '2018-01-01T01:01:01Z',
         endTime: '2019-12-31T23:59:59Z',
-        cat: 'lalu',
-        event: 'george',
-        action: 'munich'
+        cat: 'namitha',
+        event: 'telkar',
+        action: 'bangalore'
       })).to.deep.equal({
         unixtime: {
           $lt: new Date('2019-12-31T23:59:59Z').getTime()/1000,
           $gt: new Date('2018-01-01T01:01:01Z').getTime()/1000,
         },
-        cat: 'lalu',
-        event: 'george',
-        action: 'munich',
+        cat: 'namitha',
+        event: 'telkar',
+        action: 'bangalore',
         limit: 100
       });
     });
