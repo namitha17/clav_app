@@ -2,8 +2,7 @@
 
 Usage ::
 >  node app.js [-s <port>] [-r <port>] | -h
-
-
+  
 Documentation (generated via jsdoc) :
 ```
 //output in documentation/index.html
