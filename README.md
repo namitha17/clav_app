@@ -1,6 +1,5 @@
 # clav_nd
-
-Implementation details are mentioned as below:
+![abc](https://travis-ci.org/namitha17/clav_app.svg?branch=DEV)
 
 Usage ::
 >  node app.js [-s <port>] [-r <port>] | -h
